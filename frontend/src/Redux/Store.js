@@ -15,9 +15,6 @@ const initialState = {
     // updatedDetails: {
     //     updatedDetails: localStorage.getItem("userDetails") ? JSON.parse(localStorage.getItem("postDetails")) : {}
     // }
-
-
-
 };
 
 const reducer = combineReducers({

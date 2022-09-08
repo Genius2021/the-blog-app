@@ -41,6 +41,7 @@ export const editProfileDataReducer = (state = {}, action) => {
             return state;
     }
 }
+
 export const photoUploadReducer = (state = {}, action) => {
     switch (action.type) {
         case USER_PHOTO_UPLOAD_REQUEST:
@@ -53,6 +54,7 @@ export const photoUploadReducer = (state = {}, action) => {
             return state;
     }
 }
+
 export const photoUpdateReducer = (state = {}, action) => {
     switch (action.type) {
         case USER_PHOTO_UPDATE_REQUEST:

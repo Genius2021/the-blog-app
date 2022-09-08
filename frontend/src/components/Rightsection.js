@@ -1,16 +1,17 @@
 import { SiGmail } from "react-icons/si"
 import { FaFacebookF, FaTwitter } from "react-icons/fa"
 import { useEffect, useState } from "react"
-// import axios from "axios";
+import axios from "axios";
 import { Link } from "react-router-dom";
-import { axiosInstance } from "../config";
+// import { axiosInstance } from "../config";
 
 
 function Rightsection() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const getCategories = async () => {
-      const response = await axiosInstance.get("/category");
+      // const response = await axiosInstance.get("/category");
+      const response = await axios.get("/category");
       setCategories(response.data);
     }
     getCategories();

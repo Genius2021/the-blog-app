@@ -18,7 +18,8 @@ function Profile() {
     const userId = userInfo._id;
     const profilePic = userInfo.profilePic;
 
-    const publicFolder = "https://stars-blog.herokuapp.com/images/"
+    // const publicFolder = "https://stars-blog.herokuapp.com/images/"
+    const publicFolder = "http://localhost:5000/images/"
 
     const [newEmail, setNewEmail] = useState(email);
     const [newPassword, setNewPassword] = useState("");
@@ -46,13 +47,11 @@ function Profile() {
         setNewEmail("");
         setNewPassword("");
         setConfirmNewPassword("");
-
     };
 
     return (
         <>
             <section className="left__section">
-                This is the left section
             </section>
             <section className="center__section profile">
                 <div className="profile__wrapper">

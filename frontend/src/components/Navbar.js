@@ -18,7 +18,8 @@ function Navbar() {
     const { successUpdate } = photoUpdate;
 
     const dispatch = useDispatch();
-    const publicFolder = "https://stars-blog.herokuapp.com/images"
+    // const publicFolder = "https://stars-blog.herokuapp.com/images"
+    const publicFolder = "http://localhost:5000/images/"
 
     const logoutHandler = () => {
         dispatch(signout());

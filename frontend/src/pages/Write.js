@@ -70,7 +70,7 @@ function Write() {
                             <RiAddFill className="add__icon" />
                         </label>
                         <input type="file" id="form__file" onChange={e => setFile(e.target.files[0])} style={{ display: "none" }} />
-                        <input type="type" onChange={e => setTitle(e.target.value)} placeholder="Title" className="write__title" autoFocus />
+                        <input type="text" onChange={e => setTitle(e.target.value)} placeholder="Title" className="write__title" autoFocus />
                         <div>
                             <select className="select__category" value={category[0]} onChange={selectHandler}>
                                 {

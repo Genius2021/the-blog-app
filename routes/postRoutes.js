@@ -79,16 +79,20 @@ postrouter.get("/", async (req, res) => {
     const username = req.query.username;
     const category = req.query.category;
     try {
-
-        let posts;
+        let nextPosts = true;
+        let lastPost;
+        let posts = await Post.find();
+        let pages = posts.length / 5
        if(username){
-           posts = await Post.find({ username})
+           posts = await Post.find({ username}).sort({createdAt: -1});
        }else if(category){
             posts = await Post.find({categories:{
                 $in:[category]
-            } })
+            } });
        }else{
-           posts = await Post.find();
+            posts = await posts.sort({createdAt: -1}).limit(5);
+            lastPostId = posts[posts.length - 1]._id;
+            console.log(posts);
        }
        res.status(200).json(posts);
     } catch (error) {

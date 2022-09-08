@@ -36,7 +36,6 @@ function Home() {
     return (
         <>
             <section className="left__section">
-                This is the left section
             </section>
             <section className="center__section">
                 <Posts posts={posts} />

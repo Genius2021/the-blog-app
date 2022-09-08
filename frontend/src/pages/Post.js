@@ -8,7 +8,8 @@ import { deletePost, editPost, getAPost } from "../Redux/actions/postActions";
 
 function Post(props) {
     const id = props.match.params.id
-    const publicFolder = "https://stars-blog.herokuapp.com/images/"
+    // const publicFolder = "https://stars-blog.herokuapp.com/images/"
+    const publicFolder = "http://localhost:5000/images/"
     const userSignin = useSelector(state => state.userSignin);
     const { userInfo } = userSignin;
     const username = userInfo?.username;

@@ -9,7 +9,7 @@
     "path": "^0.12.7"
   },
   "scripts": {
-    "start": "node Server.js",
+    "start": "nodemon Server.js",
     "heroku-postbuild" : "cd frontend && npm install && npm run build"
   },
   "engines":{

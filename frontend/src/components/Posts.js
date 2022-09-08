@@ -22,7 +22,7 @@ function Posts({ posts }) {
     );
 
     return (
-        <>
+        <div className="center__section__posts">
             {/* {successRegister && <div className="welcome__message">You are Welcome Boss, {userInfo.firstname}! </div>} */}
             {successSignin && <div className="welcome__message">Welcome back Boss! {userInfo?.username} </div>}
             {posts.map((post) => {
@@ -35,7 +35,7 @@ function Posts({ posts }) {
                             <span className="posts__category">{category.name}</span>
                         ))}
                         <span className="posts__title" onClick={e => history.push(`/posts/${post._id}`)}>
-                            {post.title}
+                            {post.title.substring(0, 50)}...
                         </span>
                         <hr />
                     </div>
@@ -44,7 +44,7 @@ function Posts({ posts }) {
             })}
 
 
-        </>
+        </div>
     )
 }
 
